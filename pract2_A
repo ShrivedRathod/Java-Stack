@@ -1,0 +1,30 @@
+class Employee {
+    void calculateSalary() {
+        System.out.println("Employee salary details");
+    }
+}
+
+class Manager extends Employee {
+    @Override
+    void calculateSalary() {
+        System.out.println("Manager Salary: Rs. 80,000");
+    }
+}
+
+class Programmer extends Employee {
+    @Override
+    void calculateSalary() {
+        System.out.println("Programmer Salary: Rs. 60,000");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Employee e1 = new Manager();
+        Employee e2 = new Programmer();
+
+        e1.calculateSalary();
+        e2.calculateSalary();
+    }
+}
